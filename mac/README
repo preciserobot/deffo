@@ -1,0 +1,27 @@
+# install a MacOS virtual machine
+# (adopted from: https://www.howtogeek.com/289594/how-to-install-macos-sierra-in-virtualbox-on-windows-10/)
+#
+# run "createInstallDisk" script to create installation disk on your mac
+#
+# create and configure VM
+#	2 CPU / 128 VRAM / no floppy / SATA CD drive
+#	Run the "convinceApple" script with the VMname as argument
+#
+# Change resolution 
+#	VBoxManage setextradata "macOS Sierra" "VBoxInternal2/EfiGopMode" N
+#	1 gives you a resolution of 800×600
+#	2 gives you a resolution of 1024×768 (default)
+#	3 gives you a resolution of 1280×1024
+#	4 gives you a resolution of 1440×900
+#	5 gives you a resolution of 1920×1200
+#
+# optional:
+# restore partition from backup/physical disk:
+#	Method 1:
+#		restore TimeMachine backup
+#   Method 2:
+#		Create addition Virtual Disk for the installed OS in VM Properties
+#		Created Disk will show up as another partition in Virtual Machine
+#		Restore your 10.11 El Capitan partition image to the other partition in VM
+#		Change startup disk in VM to boot with the new 10.11 El Capitan partition
+#		Once it works, delete the first Virtual disk created. You will have only 10.11 El Capitan OS in VMware Fusion
