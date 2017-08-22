@@ -7,6 +7,11 @@
 #	2 CPU / 128 VRAM / no floppy / SATA CD drive
 #	Run the "convinceApple" script with the VMname as argument
 #
+# Install VM
+#	start VM
+#	create a new partition on the virtual harddrive
+#	install MacOS
+#
 # Change resolution 
 #	VBoxManage setextradata "macOS Sierra" "VBoxInternal2/EfiGopMode" N
 #	1 gives you a resolution of 800×600
